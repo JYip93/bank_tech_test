@@ -24,4 +24,13 @@ describe("Account", function(){
             expect(account.getBalance()).toBe(55)
         })
     })
+
+    describe("Print bank statement", function(){
+        it("show the full statment of the user's transactions", function(){
+            let account = new Account
+            account.deposit(1000)
+            account.withdraw(250)
+            expect(account.printStatment()).toEqual("date || credit || debit || balance\n")
+        })
+    })
 })

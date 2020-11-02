@@ -1,12 +1,14 @@
+const moment = require('moment') 
 class Transaction{
-    constructor(date, amount, transactionType){
+    constructor(amount, transactionType, date = new Date, updatedBalance){
         this.date = date
         this.amount = amount
         this.transactionType = transactionType
+        this.updatedBalance = updatedBalance
     }
 
     getDate(){
-        return this.date
+        return (moment(this.date).format('L'))
     }
 
     getAmount(){
@@ -15,6 +17,10 @@ class Transaction{
 
     getTransactionType(){
         return this.transactionType
+    }
+
+    getUpdatedBalance(){
+        return this.updatedBalance
     }
 }
 
