@@ -1,10 +1,20 @@
 class Transaction{
-    constructor(date){
+    constructor(date, amount, transactionType){
         this.date = date
+        this.amount = amount
+        this.transactionType = transactionType
     }
 
     getDate(){
         return this.date
+    }
+
+    getAmount(){
+       return this.amount
+    }
+
+    getTransactionType(){
+        return this.transactionType
     }
 }
 
