@@ -2,7 +2,8 @@
   "spec_dir": "spec",
   "spec_files": [
     "AccountSpec.js",
-    "TransactionSpec.js"
+    "TransactionSpec.js",
+    "TransactionListSpec.js"
   ],
   "helpers": [
     "helpers/**/*.js"
