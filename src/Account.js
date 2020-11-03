@@ -1,33 +1,29 @@
-const { TransactionList } = require("./TransactionList")
-const { Transaction } = require("./Transaction")
+const { TransactionList } = require('./TransactionList')
+const { Transaction } = require('./Transaction')
 
-class Account{
-    constructor(){
-        this.balance = 0
-        this.transactionList = new TransactionList
-    }
+class Account {
+  constructor () {
+    this.balance = 0
+    this.transactionList = new TransactionList()
+  }
 
-    getBalance(){
-        return this.balance
-    }
+  getBalance () {
+    return this.balance
+  }
 
-    deposit(amount){
-        this.balance += amount
-        this.transactionList.addTransaction(new Transaction(amount, 'deposit', undefined, this.balance))
+  deposit (amount) {
+    this.balance += amount
+    this.transactionList.addTransaction(new Transaction(amount, 'deposit', undefined, this.balance))
+  }
 
-    }
+  withdraw (amount) {
+    this.balance -= amount
+    this.transactionList.addTransaction(new Transaction(amount, 'withdraw', undefined, this.balance))
+  }
 
-    withdraw(amount){
-        this.balance -= amount
-        this.transactionList.addTransaction(new Transaction(amount, 'withdraw', undefined, this.balance))
-
-    }
-
-    printStatment(){
-        
-        return this.transactionList.printList()
-    }
-
+  printStatment () {
+    return this.transactionList.printList()
+  }
 }
 
 module.exports = { Account: Account }
