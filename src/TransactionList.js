@@ -10,11 +10,15 @@ class TransactionList{
     }
 
     printList(){
-        // set the header in variable
-        //iterate over the listOfTransactions for each transaction
-        // if else statment
-        // adding each attribute to each column
-        //statement += "\n ${this.date}"
+        let header = "date || credit || debit || balance\n"
+        this.listOfTransactions.forEach((transaction) => {
+            if (transaction.transactionType == 'deposit'){
+                header += `${transaction.date} || || ${transaction.amount} || ${transaction.updatedBalance}\n`
+            } else {
+                header += `${transaction.date} || ${transaction.amount} || || ${transaction.updatedBalance}\n`
+            }
+        })
+    return header
     }
 }
 

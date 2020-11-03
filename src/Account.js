@@ -24,7 +24,8 @@ class Account{
     }
 
     printStatment(){
-        return "date || credit || debit || balance\n"
+        
+        return this.transactionList.printList()
     }
 
 }
