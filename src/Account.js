@@ -13,13 +13,13 @@ class Account{
 
     deposit(amount){
         this.balance += amount
-        this.transactionList.addTransaction(new Transaction(amount, 'deposit', this.balance))
+        this.transactionList.addTransaction(new Transaction(amount, 'deposit', undefined, this.balance))
 
     }
 
     withdraw(amount){
         this.balance -= amount
-        this.transactionList.addTransaction(new Transaction(amount, 'withdraw', this.balance))
+        this.transactionList.addTransaction(new Transaction(amount, 'withdraw', undefined, this.balance))
 
     }
 

@@ -1,14 +1,14 @@
 const moment = require('moment') 
 class Transaction{
     constructor(amount, transactionType, date = new Date, updatedBalance){
-        this.date = date
         this.amount = amount
         this.transactionType = transactionType
+        this.date = (moment(date).format('L'))
         this.updatedBalance = updatedBalance
     }
 
     getDate(){
-        return (moment(this.date).format('L'))
+        return this.date
     }
 
     getAmount(){
