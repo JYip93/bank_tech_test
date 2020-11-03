@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "jasmine": "^3.6.3",
+    "jasmine-mockdate": "^0.1.0",
     "moment": "^2.29.1"
   },
   "devDependencies": {

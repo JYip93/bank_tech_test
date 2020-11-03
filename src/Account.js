@@ -22,7 +22,7 @@ class Account {
   }
 
   printStatment () {
-    console.log(this.transactionList.printList())
+    return(this.transactionList.printList())
   }
 }
 
