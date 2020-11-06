@@ -5,18 +5,19 @@ class TransactionList {
 
   addTransaction (transaction) {
     this.listOfTransactions.push(transaction)
+    this.listOfTransactions.reverse
   }
 
   printList () {
-    let header = 'date || credit || debit || balance\n'
+    let statement = 'date || credit || debit || balance\n'
     this.listOfTransactions.forEach((transaction) => {
       if (transaction.transactionType === 'deposit') {
-        header += `${transaction.date} || || £${transaction.amount}.00 || £${transaction.updatedBalance}.00\n`
+        statement += `${transaction.date} || || ${transaction.amount}.00 || ${transaction.updatedBalance}.00\n`
       } else {
-        header += `${transaction.date} || £${transaction.amount}.00 || || £${transaction.updatedBalance}.00\n`
+        statement += `${transaction.date} || ${transaction.amount}.00 || || ${transaction.updatedBalance}.00\n`
       }
     })
-    return header
+    return statement
   }
 }
 

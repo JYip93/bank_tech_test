@@ -17,6 +17,6 @@ describe('Transaction List', function () {
   })
 
   it('list of transactions and details to be returned in new line each', function () {
-    expect(list.printList()).toBe('date || credit || debit || balance\n02/11/2020 || || £500.00 || £1000.00\n03/11/2020 || £100.00 || || £900.00\n')
+    expect(list.printList()).toBe('date || credit || debit || balance\n02/11/2020 || || 500.00 || 1000.00\n03/11/2020 || 100.00 || || 900.00\n')
   })
 })
