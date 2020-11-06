@@ -3,7 +3,7 @@ class Transaction {
   constructor (amount, transactionType, updatedBalance, date = new Date()) {
     this.amount = amount
     this.transactionType = transactionType
-    this.date = (moment(date).format('L'))
+    this.date = (moment(date).format('DD/MM/YYYY'))
     this.updatedBalance = updatedBalance
   }
 
